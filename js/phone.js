@@ -26,10 +26,14 @@ document.getElementById("btn-phone-plus").addEventListener("click", function () 
   const newPhoneInputField = updatePhoneNumber(true);
 
   updatePhoneTotalPrice(newPhoneInputField);
+
+  calculateSubTotal();
 });
 
 document.getElementById("btn-phone-minus").addEventListener("click", function () {
   const newPhoneInputField = updatePhoneNumber(false);
 
   updatePhoneTotalPrice(newPhoneInputField);
+
+  calculateSubTotal();
 });
