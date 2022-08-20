@@ -17,4 +17,16 @@ function calculateSubTotal() {
   const currentSubTotal = currentPhoneTotal + currentCaseTotal;
 
   setTextValueById("sub-total", currentSubTotal);
+
+  // calculate tax
+
+  const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
+  const taxAmount = parseFloat(taxAmountString);
+
+  setTextValueById("tax-amount", taxAmount);
+
+  // total
+
+  const totalAmount = currentSubTotal + taxAmount;
+  setTextValueById("total-amount", totalAmount);
 }
